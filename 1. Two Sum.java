@@ -5,6 +5,7 @@ class Solution {
         int i = 0;
         int j = nums.length-1;
 
+
         int first = -1;
         int second = -1;
 
