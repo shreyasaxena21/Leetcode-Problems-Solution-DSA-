@@ -18,7 +18,7 @@ class Solution {
         return -1;
     }
     //approach 2 - Hashing
-    public int majorityElement(int[] nums) {
+    public int majorityElement2(int[] nums) {
         int n = nums.length;
         HashMap<Integer, Integer> map = new HashMap<>();
         for(int i = 0; i<n; i++){
@@ -30,6 +30,26 @@ class Solution {
         }
 
         return -1;
+    }
+
+    //approach 3 - Boyer - Moore Voting Algo
+    //TC - O(N) SC - O(1)
+    public int majorityElement(int[] nums) {
+        int count = 0;
+        int majElement = 0;
+        for(int num : nums){
+            if(count == 0){
+                majElement = num;
+            }
+            if(num == majElement){
+                count++;
+            }
+
+            else{
+                count--;
+            }
+        }
+        return majElement;
     }
 
 }
