@@ -48,3 +48,6 @@ Have questions or want to collaborate?
 - 🌐 [LinkedIn](https://www.linkedin.com/in/shreya-saxena-16a011246/)
 - 🐙 [GitHub Profile](https://github.com/shreyasaxena21)
 
+## ⭐️ Support
+
+If you find this repo helpful, consider giving it a ⭐️ to support my journey!
