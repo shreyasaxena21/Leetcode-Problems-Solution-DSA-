@@ -24,7 +24,8 @@
 // }
 
 class Solution{
-    public int minCostClimbingStairs(int[] cost) {
+    //TC - O(N) SC - O(N)
+    public int minCostClimbingStairs1(int[] cost) {
         int n = cost.length;
         int dp[] = new int[n];
         // base case
@@ -35,5 +36,21 @@ class Solution{
         }
 
         return Math.min(dp[n-1], dp[n-2]);
+    }
+
+    //TC -O(N) SC-O(1)
+    public int minCostClimbingStairs(int[] cost) {
+        int n = cost.length;
+        // base case
+        int prev1 = cost[1];
+        int prev2 = cost[0];
+        for(int i = 2; i<n; i++){
+            int currentValue = cost[i] + Math.min(prev1, prev2);
+            prev2 = prev1; // n-1 value goes to n-2 
+            prev1 = currentValue; // update n-1 value
+
+        }
+
+        return Math.min(prev1, prev2);
     }
 }
